@@ -1,4 +1,9 @@
-/* have a nice day */
+/* have a nice day
+Program demonstrates:
+1. How to get data using getchar()
+2.
+
+*/
 
 #include <ctype.h> // for isalpha
 #include <stdio.h>
@@ -11,7 +16,9 @@ int main()
 	int  i, sum = 0;
 
 	printf("\nHi! What is your name ?  ");
-	for (i=0; (c=getchar()) != '\n'; ++i)
+	for (i=0;
+		( c = getchar() ) != '\n';
+		++i)
 	{
 		name[i] = c;
 		if (isalpha(c))
