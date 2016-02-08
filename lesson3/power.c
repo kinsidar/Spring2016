@@ -1,7 +1,7 @@
-#include <stdio.h> 
+#include <stdio.h>
 
 
-int cats(int x, int y);
+int power(int x, int y);
 
 int main()
 {
@@ -9,13 +9,13 @@ int main()
 
 	for (i = 0; i < 10; i++)
 	{
-		printf ("%d %d %d \n ", i, cats(2, i), cats(-3, i));
+		printf ("%d %d %d \n ", i, power(2, i), power(-3, i));
 	}
-	return 0;
+	return 0; 
 
 }
 
-int cats(int base, int n)
+int power(int base, int n)
 {
 	int i, p;
 
