@@ -13,7 +13,7 @@ int main()
     scanf("%d", &n);
 
     printf ("\nyou typed %d \n", n);
-    for (i = 0; i < n; ++i)
+    for (i = 0; i < n; i++)
     {
       /* insert a new line every 10 numbers */
       if (i % 3 == 0)
