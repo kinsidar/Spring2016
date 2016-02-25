@@ -32,7 +32,6 @@ void demo()
 
   total +=2;
   printf ("Total inside **demo** is %d\n", total);
-
 }
 
 int demo2()

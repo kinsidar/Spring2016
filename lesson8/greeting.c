@@ -11,7 +11,6 @@ int main()
   greeting("hello", name);
   greeting("bye bye", name);
 
-
 }
 
 

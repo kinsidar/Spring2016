@@ -11,7 +11,7 @@ void BadSwap(int a, int b)
 
 /* it's called passing by reference or
    passing a pointer to */
-void Swap(int pA, int *pB)
+void Swap(int *pA, int *pB)
 {
   int tmp;
 

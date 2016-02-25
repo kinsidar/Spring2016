@@ -18,11 +18,6 @@ int main()
   demo();
 
 }
-void demo2()
-{
-    printf("hello");
-}
-
 
 void demo()
 {
