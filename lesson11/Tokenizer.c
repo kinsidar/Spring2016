@@ -4,9 +4,12 @@ char* GetToken(char* string);
 
 int main()
 {
-   char str[80] = "This is NYU Tandon School of Engineering";
+   //char str[80] = "This is NYU Tandon School of Engineering";
    //char str[] = "one";
    //char str[] = "";
+   //char str[80] = "This is NYU Tandon School of Engineering ";
+   char str[80] = "This  is NYU Tandon School of Engineering";
+
 
    char *token;
 
@@ -57,12 +60,18 @@ char* GetToken(char* string)
   while(*string != ' ' && *string != '\0')
     string++;
 
+
   /* right now we are pointing at the space or the end
      let's put a NULL there and return it */
   if (*string != '\0')
   {
     *string = '\0';
+
     oldString = ++string;
+
+    while(*oldString == ' ')
+      oldString++;
+
   }
   else
   {

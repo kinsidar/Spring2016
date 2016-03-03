@@ -11,29 +11,24 @@ int main()
   int size_a = sizeof(lab_a)/sizeof(int);
   int size_b = sizeof(lab_b)/sizeof(int);
 
-  int total_size = size_a + size_b;
-  printf("total size to allocate: %d\n", total_size);
+  int total = size_a + size_b;
+  int total_bytes = sizeof(lab_a) + sizeof(lab_b);
+  //int *c = calloc(total_bytes, sizeof(int));
+  int *c = malloc(total_bytes);
 
-  /* allocate enough memory */
-  int* p_grades = calloc(total_size, sizeof(int));
+  /* copy all the elements from a into the new array */
+  int j = 0;
+  for(j=0; j < size_a; j++)
+    c[j] = lab_a[j];
 
-  for (int ii=0; ii < size_a; ii++)
-    p_grades[ii] = lab_a[ii];
+  /* copy b into the new array */
+  for(int k=0; k < size_b; k++)
+    c[k + j] = lab_b[k];
 
-  for (int j=0; j < size_b; j++)
-  {
-    printf("size_a + j => %d\n", size_a + j);
-    p_grades[size_a + j] = lab_b[j];
-  }
+  // print out the array
+  for(int ii=0; ii< total; ii++)
+    printf ("%d, ", c[ii]);
 
-  printf ("The total array is: \n");
-  for (int k=0; k < total_size; k++)
-    printf("%d, ", p_grades[k]);
-
-  printf("\n");
-
-  /* remember to free */
-  free(p_grades);
-  p_grades = NULL; /* good practive */
+  free(c);
 
 }

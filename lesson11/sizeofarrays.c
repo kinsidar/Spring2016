@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 
 int main()
@@ -17,11 +18,11 @@ int main()
   double double_array[] = {0.0, 1.0, 2.0, 3.0, 4.0}; //
 
   /* huh ? what's going on ? */
-  printf ("sizeof array of int: %lu\n", sizeof(int_array));
-  printf ("sizeof array of float: %lu\n", sizeof(float_array));
-  printf ("sizeof array of double: %lu\n", sizeof(double_array));
+  printf ("sizeof array of int: %lu\n", sizeof(int_array)/sizeof(int));
+  printf ("sizeof array of float: %lu\n", sizeof(float_array)/sizeof(float));
+  printf ("sizeof array of double: %lu\n", sizeof(double_array)/sizeof(double));
 
-  printf ("sizeof array of char: %lu\n", sizeof(str));
+  printf ("sizeof array of char: %lu\n", strlen(str));
 
 
 }

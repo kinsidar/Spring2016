@@ -28,19 +28,6 @@ void bubblesort(int a[], int min, int max)     /* n is the size of a[] */
   } while(swapped);
 }
 
-void bubble2(int a[], int n)
-{
-    int i, j;
-    for (i=0; i < n-1; i++ )
-      for (j=n-1; j > i; j--)
-        if (a[j-1] > a[j])
-        {
-          printf("i=%d. j=%d. swaping: %d and %d \n", i, j, a[j-1], a[j]);
-          swap(&a[j-1], &a[j]);
-        }
-}
-
-
 int main()
 {
   int array[] = {45, 100,5, 10,60};
