@@ -2,7 +2,7 @@
 
 int main()
 {
-  for ( int ii=0; ii <20 ; ii++)
+  for ( int ii=0; ii <10 ; ii++)
   {
     if (ii % 2 == 0 )
       continue;

@@ -66,7 +66,6 @@ char* GetToken(char* string)
   if (*string != '\0')
   {
     *string = '\0';
-
     oldString = ++string;
 
     while(*oldString == ' ')
