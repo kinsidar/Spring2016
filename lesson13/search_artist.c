@@ -15,15 +15,16 @@ char artists[][MAX] =
 
 void find_artist(char search_for[])
 {
-  printf("searching for %s\n", search_for);
+  // Uncomment the following for debug printf
+  //printf("searching for %s\n", search_for);
 
   int i;
   for (i = 0; i < 5; i++)
   {
-    printf("currently looking at %s\n", artists[i]);
+    //printf("currently looking at %s\n", artists[i]);
 
     char *result = strstr(artists[i], search_for);
-    printf("%s\n", result);
+    //printf("%s\n", result);
 
     if (result != NULL)
       printf("Artist %i: '%s'\n", i, artists[i]);
@@ -36,7 +37,7 @@ int main()
   char search_for[MAX];
   printf("search for: ");
   fgets(search_for, MAX, stdin);
-  searchfor[strlen(search_for)- 1] = '\0';
+  search_for[strlen(search_for)- 1] = '\0';
 
   find_artist(search_for);
 }
